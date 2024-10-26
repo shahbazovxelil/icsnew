@@ -61,163 +61,80 @@
     ================================================== -->
     <section>
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-9">
+            <div class="row mt-n5">
 
-                    <div class="position-relative elements-block float-start w-100">
-
-                        <div class="inner-title">
-                            <div class="heading-one">
-                                <span><i></i>horizontal tab</span>
+                <div class="col-lg-4 mt-5">
+                    <div class="pe-xl-5">
+                        <div class="bg-dark border-radius-5 p-4 p-xl-1-9 mb-4">
+                            <div class="heading-one secondary mb-1-9">
+                                <span>Categories</span>
                             </div>
-                        </div>
-
-                        <div class="horizontaltab tab-style1 position-relative z-index-9">
-                            <ul class="resp-tabs-list hor_1">
-                                <li>Why Choose Us</li><br>
-                                <li>Our Vision</li><br>
-                                <li>Our Mission</li><br>
-                                <li>Our Mission2</li>
+                            <ul class="side-bar-list list-unstyled m-0">
+                                {{-- SOL KATEQORIYALARIN FOREACH-I BURA YAZILACAQ -- START --}}
+                                <li class="mb-3 d-flex justify-content-between align-items-center">
+                                    <a href="/product-detail?id=123">
+                                        Scientific
+                                    </a>
+                                </li>
+                                <li class="mb-3 d-flex justify-content-between align-items-center">
+                                    <a href="/product-detail?id=123">
+                                        Chemistry
+                                    </a>
+                                </li>
+                                <li class="mb-3 d-flex justify-content-between align-items-center">
+                                    <a href="/product-detail?id=123">
+                                        Pathology
+                                    </a>
+                                </li>
+                                <li class="mb-3 d-flex justify-content-between align-items-center">
+                                    <a href="/product-detail?id=123">
+                                        Gemological
+                                    </a>
+                                </li>
+                                <li class="mb-3 d-flex justify-content-between align-items-center">
+                                    <a href="/product-detail?id=123">
+                                        Healthcare
+                                    </a>
+                                </li>
+                                {{-- SOL KATEQORIYALARIN FOREACH-I BURA YAZILACAQ -- STOP --}}
                             </ul>
-                            <div class="resp-tabs-container hor_1 p-0">
-                                <div>
-                                    <div class="row align-items-center mt-n4">
-                                        <div class="col-md-4 mt-4">
-                                            <div>
-                                                <img src="{{asset('frontend/img/content/why-choose-05.jpg')}}" alt="..." class="border-radius-10">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8 mt-4">
-                                            <div>
-                                                <p>We provide you with objective information so that you can map your route to fitness and wellness.</p>
-                                                <div class="row mt-n3">
-                                                    <div class="col-sm-6 mt-3">
-                                                        <div class="d-flex">
-                                                            <div class="pt-1">
-                                                                <img src="{{asset('frontend/img/icons/icon-06.png')}}" alt="...">
-                                                            </div>
-                                                            <div class="ps-3">
-                                                                <h3 class="display-27 text-secondary mb-2">Helpful Test Tips</h3>
-                                                                <p class="mb-0">Regulatory surroundings can assist aid sponsors.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6 mt-3">
-                                                        <div class="d-flex">
-                                                            <div class="pt-1">
-                                                                <img src="{{asset('frontend/img/icons/icon-07.png')}}" alt="...">
-                                                            </div>
-                                                            <div class="ps-3">
-                                                                <h3 class="display-27 text-secondary mb-2">Patient Centered Care</h3>
-                                                                <p class="mb-0">Regulatory surroundings can assist aid sponsors.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="row align-items-center mt-n4">
-                                        <div class="col-md-8 mt-4 order-2 order-md-1">
-                                            <div>
-                                                <p>One of the important functions of the science laboratory is the deepening of the scholars know-how that medical principles and alertness are carefully associated with their personal natural environment.</p>
-                                                <p class="mb-0">We provide you with objective information so that you can map your route to fitness and wellness.</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 mt-4 order-1 order-md-2">
-                                            <div>
-                                                <img src="{{asset('frontend/img/content/why-choose-03.jpg')}}" alt="..." class="border-radius-5">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="row align-items-center mt-n4">
-                                        <div class="col-md-4 mt-4">
-                                            <div>
-                                                <img src="{{asset('frontend/img/content/why-choose-02.jpg')}}" alt="..." class="border-radius-5">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8 mt-4">
-                                            <div>
-                                                <p>We provide you with objective information so that you can map your route to fitness and wellness.</p>
-                                                <div class="lab-progress">
-                                                    <div class="progress-text">
-                                                        <div class="row mb-2">
-                                                            <div class="col-6">Endocrinology Research</div>
-                                                            <div class="col-6 text-end">80%</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="custom-progress progress rounded-0 mb-3">
-                                                        <div class="animated custom-bar progress-bar slideInLeft bg-primary" style="width:80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar"></div>
-                                                    </div>
-                                                    <div class="progress-text">
-                                                        <div class="row mb-2">
-                                                            <div class="col-6">Chemical Research</div>
-                                                            <div class="col-6 text-end">95%</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="custom-progress progress rounded-0">
-                                                        <div class="animated custom-bar progress-bar slideInLeft bg-primary" style="width:95%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="row align-items-center mt-n4">
-                                        <div class="col-md-4 mt-4">
-                                            <div>
-                                                <img src="{{asset('frontend/img/content/why-choose-02.jpg')}}" alt="..." class="border-radius-5">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8 mt-4">
-                                            <div>
-                                                <p>We provide you with objective information so that you can map your route to fitness and wellness.</p>
-                                                <div class="lab-progress">
-                                                    <div class="progress-text">
-                                                        <div class="row mb-2">
-                                                            <div class="col-6">Endocrinology Research</div>
-                                                            <div class="col-6 text-end">80%</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="custom-progress progress rounded-0 mb-3">
-                                                        <div class="animated custom-bar progress-bar slideInLeft bg-primary" style="width:80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar"></div>
-                                                    </div>
-                                                    <div class="progress-text">
-                                                        <div class="row mb-2">
-                                                            <div class="col-6">Chemical Research</div>
-                                                            <div class="col-6 text-end">95%</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="custom-progress progress rounded-0">
-                                                        <div class="animated custom-bar progress-bar slideInLeft bg-primary" style="width:95%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-
-                        <div class="copy-element"><a class="copy-clipboard" data-clipboard-target="#section">Copy</a></div>
-                        <div class="source-element"><a class="source-modal" href="tabs.html#copy-code">Source</a></div>
-
-                        <div id="copy-code" class="mfp-hide white-popup-block popup-copy">
-                            <div class="copy-element"><a class="copy-clipboard" data-clipboard-target="#section">copy</a></div>
-                            <pre id="section"><code class="language-html"></code></pre>
-                        </div>
-
                     </div>
-
                 </div>
+                <div class="col-lg-8 mt-5">
+                    <div class="horizontaltab tab-style1 position-relative z-index-9">
+                        <ul class="resp-tabs-list hor_1">
+                            {{-- YUXARI TABLARIN FOREACH-I BURA YAZILACAQ -- START --}}
+                            <li>Why Choose Us</li>
+                            <li>Our Vision</li>
+                            <li>Our Mission</li>
+                            {{-- YUXARI TABLARIN FOREACH-I BURA YAZILACAQ -- STOP --}}
+                        </ul>
+                        <div class="resp-tabs-container hor_1 p-0">
+                            <div> {{--BIRINCI TAB -- START--}}
+                                <div>
+                                    <p>1. tab -->> One of the important functions of the science laboratory is the deepening of the scholars know-how that medical principles and alertness are carefully associated with their personal natural environment.</p>
+                                    <p class="mb-0">We provide you with objective information so that you can map your route to fitness and wellness.</p>
+                                </div>
+                            </div> {{--BIRINCI TAB -- STOP--}}
 
+                            <div> {{--IKINCI TAB -- START--}}
+                                <div>
+                                    <p>2. tab -->> One of the important functions of the science laboratory is the deepening of the scholars know-how that medical principles and alertness are carefully associated with their personal natural environment.</p>
+                                    <p class="mb-0">We provide you with objective information so that you can map your route to fitness and wellness.</p>
+                                </div>
+                            </div> {{--IKINCI TAB -- STOP--}}
+
+                            <div> {{--UCUNCU TAB -- START--}}
+                                <div>
+                                    <p>3. tab -->> One of the important functions of the science laboratory is the deepening of the scholars know-how that medical principles and alertness are carefully associated with their personal natural environment.</p>
+                                    <p class="mb-0">We provide you with objective information so that you can map your route to fitness and wellness.</p>
+                                </div>
+                            </div> {{--IKINCI TAB -- STOP--}}
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
     </section>
 
