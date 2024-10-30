@@ -30,7 +30,7 @@
                                 <div class="row">
                                     <div class="col-lg-8 offset-lg-2">
 
-                                        <form action="{{route('backend.mentor_experiences.update',$mentor_experience->id)}}" method="POST" >
+                                        <form action="{{route('backend.sub-products.update',$query->id)}}" method="POST" >
                                             @csrf
                                             @method('PUT')
                                             <div class="mb-3">

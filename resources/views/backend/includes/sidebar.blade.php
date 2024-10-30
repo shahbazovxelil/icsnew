@@ -78,17 +78,32 @@
 {{--            </li>--}}
 
 
+{{--            <li class="side-nav-item sg--dropdown sg--dropdown--relative">--}}
+{{--                <a href="#" class="side-nav-link sg--dropdown-toggle" data-bs-toggle="dropdown">--}}
+{{--                    <i class="uil uil-user"></i>--}}
+{{--                    <span>Mentorlar</span>--}}
+{{--                </a>--}}
+{{--                <div class="sg--dropdown-menu">--}}
+{{--                    <div class="sg--dropdown-menu-item">--}}
+{{--                        <a class="sg--dropdown-menu-item--link" href="{{route('backend.mentors.index')}}"> Mentors list</a>--}}
+{{--                    </div>--}}
+{{--                    <div class="sg--dropdown-menu-item">--}}
+{{--                        <a class="sg--dropdown-menu-item--link" href="{{route('backend.mentor_experiences.index')}}"> Mentor təcrübə</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </li>--}}
+
             <li class="side-nav-item sg--dropdown sg--dropdown--relative">
                 <a href="#" class="side-nav-link sg--dropdown-toggle" data-bs-toggle="dropdown">
                     <i class="uil uil-user"></i>
-                    <span>Mentorlar</span>
+                    <span>Ürünlər</span>
                 </a>
                 <div class="sg--dropdown-menu">
                     <div class="sg--dropdown-menu-item">
-                        <a class="sg--dropdown-menu-item--link" href="{{route('backend.mentors.index')}}"> Mentors list</a>
+                        <a class="sg--dropdown-menu-item--link" href="{{route('backend.products.index')}}"> Ürünlər list</a>
                     </div>
                     <div class="sg--dropdown-menu-item">
-                        <a class="sg--dropdown-menu-item--link" href="{{route('backend.mentor_experiences.index')}}"> Mentor təcrübə</a>
+                        <a class="sg--dropdown-menu-item--link" href="{{route('backend.sub-products.index')}}">Alt Ürünlər </a>
                     </div>
                 </div>
             </li>

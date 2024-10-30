@@ -30,18 +30,22 @@
                                 <div class="row">
                                     <div class="col-lg-8 offset-lg-2">
 
-                                        <form action="{{route('backend.mentor_experiences.translation.update',['mentor_exp_id'=>$translation->mentor_exp_id,'lang'=>$translation->locale])}}" method="POST" enctype="multipart/form-data">
+                                        <form
+                                            action="{{route('backend.sub-products.translation.update',['sub_product_id'=>$translation->sub_product_id,'lang'=>$translation->locale])}}"
+                                            method="POST" enctype="multipart/form-data">
                                             @csrf
                                             @method('PUT')
                                             <div class="mb-3">
                                                 <label for="name" class="form-label">Name</label>
-                                                <input class="form-control" type="text" name="name" value="{{old('name',$mentor_experience)}}"   placeholder="Enter your name">
+                                                <input class="form-control" type="text" name="name"
+                                                       value="{{old('name',$translation)}}"
+                                                       placeholder="Enter your name">
                                                 @error('name')
                                                 <span class="text-danger">{{$message}}</span>
                                                 @enderror
                                             </div>
                                             <div class="mb-3 mb-0 text-center">
-                                                <button  class="btn btn-primary" >Update</button>
+                                                <button class="btn btn-primary">Update</button>
                                             </div>
                                         </form>
 

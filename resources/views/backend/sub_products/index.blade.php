@@ -11,10 +11,10 @@
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
-                            <li class="breadcrumb-item active">Mentor təcrübəsi</li>
+                            <li class="breadcrumb-item active">Sub Product</li>
                         </ol>
                     </div>
-                    <h4 class="page-title">Mentor təcrübəsi</h4>
+                    <h4 class="page-title">Sub Product</h4>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex justify-content-end">
-                            <a href="{{route('backend.mentor_experiences.create')}}" class="btn btn-success mb-2 text-end"><i class="mdi mdi-plus-circle me-2"></i>Add mentor experience</a>
+                            <a href="{{route('backend.sub-products.create')}}" class="btn btn-success mb-2 text-end"><i class="mdi mdi-plus-circle me-2"></i>Add Sub Product</a>
 
                         </div>
                         <div class="tab-content">
@@ -42,31 +42,31 @@
                                     </thead>
                                     <tbody>
 
-                                    @foreach($mentor_experiences as $mentor_experience)
+                                    @foreach($subProducts as $subProduct)
                                     <tr>
                                         <td>
                                             {{$loop->iteration}}
                                         </td>
                                         <td>
-                                            {{$mentor_experience->name}}
+                                            {{$subProduct->name}}
 
                                         </td>
                                         <td>
-                                            {{$mentor_experience->locale}}
+                                            {{$subProduct->locale}}
                                         </td>
 
                                         <td>
 
-                                            <a href="{{ route('backend.mentor_experiences.edit', $mentor_experience) }}" class="edit btn btn-primary btn-sm ">Translate</a>
-                                            <a href="{{ route('backend.mentor_experiences.destroy', $mentor_experience) }}" class="edit btn btn-danger btn-sm delete ">Del</a>
+                                            <a href="{{ route('backend.sub-products.edit', $subProduct) }}" class="edit btn btn-primary btn-sm ">Translate</a>
+                                            <a href="{{ route('backend.sub-products.destroy', $subProduct) }}" class="edit btn btn-danger btn-sm delete ">Del</a>
 
 
 
                                         </td>
                                         <td>
-                                            {!! $mentor_experience->hasTranslation('ru') ? '<a href="'.route('backend.mentor_experiences.translation.edit', [$mentor_experience, 'lang' => 'ru']).'" class="edit btn btn-secondary btn-sm">Rus</a>' : '' !!}
-                                            {!! $mentor_experience->hasTranslation('en') ? '<a href="'.route('backend.mentor_experiences.translation.edit', [$mentor_experience, 'lang' => 'en']).'" class="edit btn btn-dark btn-sm">En</a>' : '' !!}
-                                            {!! $mentor_experience->hasTranslation('az') ? '<a href="'.route('backend.mentor_experiences.translation.edit', [$mentor_experience, 'lang' => 'az']).'" class="edit btn btn-info btn-sm">Az</a>' : '' !!}
+                                            {!! $subProduct->hasTranslation('ru') ? '<a href="'.route('backend.sub-products.translation.edit', [$subProduct, 'lang' => 'ru']).'" class="edit btn btn-secondary btn-sm">Rus</a>' : '' !!}
+                                            {!! $subProduct->hasTranslation('en') ? '<a href="'.route('backend.sub-products.translation.edit', [$subProduct, 'lang' => 'en']).'" class="edit btn btn-dark btn-sm">En</a>' : '' !!}
+                                            {!! $subProduct->hasTranslation('az') ? '<a href="'.route('backend.sub-products.translation.edit', [$subProduct, 'lang' => 'az']).'" class="edit btn btn-info btn-sm">Az</a>' : '' !!}
                                         </td>
 
 
@@ -116,7 +116,7 @@
     <script src="{{ asset('backend/js/sweetalert.min.js') }}"></script>
     <script src="{{ asset('backend/js/iziToast.min.js') }}"></script>
 
-    @include('backend.datatables.mentor_experience')
+    @include('backend.datatables.sub-product')
 
 
 @endsection

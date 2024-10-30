@@ -11,7 +11,7 @@ use App\Http\Controllers\Backend\DtCBannerController;
 use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Backend\MainBannerController;
 use App\Http\Controllers\Backend\MentorController;
-use App\Http\Controllers\Backend\MentorExperienceController;
+use App\Http\Controllers\Backend\SubProductController;
 use App\Http\Controllers\Backend\MenuController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\ServiceController;
@@ -46,7 +46,7 @@ Route::middleware('auth')->prefix('admin')->name('backend.')->group(function () 
         Route::resource('socials', SocialController::class)->except('show');
         Route::resource('courses', CourseController::class)->except('show');
         Route::resource('mentors', MentorController::class)->except('show');
-        Route::resource('mentor_experiences', MentorExperienceController::class)->except('show');
+        Route::resource('sub-products', SubProductController::class)->except('show');
         Route::resource('what_learns', WhatLearnController::class)->except('show');
         Route::resource('structures', StructureController::class)->except('show');
         Route::resource('course_mentor', CourseMentorController::class)->except('show');
@@ -88,8 +88,8 @@ Route::middleware('auth')->prefix('admin')->name('backend.')->group(function () 
     Route::get('co_it_banners/translation-edit/{id}/{lang}',[CoItBannerController::class,'translationEdit'])->name('co_it_banners.translation.edit');
     Route::put('co_it_banners/{co_it_banner_id}/{lang}/translation-update',[CoItBannerController::class,'translationUpdate'])->name('co_it_banners.translation.update');
 
-        Route::get('mentor_experiences/translation-edit/{id}/{lang}',[MentorExperienceController::class,'translationEdit'])->name('mentor_experiences.translation.edit');
-        Route::put('mentor_experiences/{mentor_exp_id}/{lang}/translation-update',[MentorExperienceController::class,'translationUpdate'])->name('mentor_experiences.translation.update');
+        Route::get('sub-products/translation-edit/{id}/{lang}',[SubProductController::class,'translationEdit'])->name('sub-products.translation.edit');
+        Route::put('sub-products/{sub_product_id}/{lang}/translation-update',[SubProductController::class,'translationUpdate'])->name('sub-products.translation.update');
 
         Route::get('what_learns/translation-edit/{id}/{lang}',[WhatLearnController::class,'translationEdit'])->name('what_learns.translation.edit');
         Route::put('what_learns/{what_learn_id}/{lang}/translation-update',[WhatLearnController::class,'translationUpdate'])->name('what_learns.translation.update');
@@ -113,7 +113,7 @@ Route::middleware('auth')->prefix('admin')->name('backend.')->group(function () 
 Route::name('frontend.')->group(function ($locale) {
 
     Route::get('', [IndexController::class,'index'])->name('index');
-    Route::get('/course', [\App\Http\Controllers\Frontend\CourseController::class,'index'])->name('course');
+    Route::get('/course', [CourseController::class,'index'])->name('course');
     Route::get('/service', [DtConsultingController::class,'index'])->name('service');
     Route::get('/products', [DtConsultingController::class,'products'])->name('products');
     Route::get('/product-detail', [DtConsultingController::class,'productDetail'])->name('product-detail');

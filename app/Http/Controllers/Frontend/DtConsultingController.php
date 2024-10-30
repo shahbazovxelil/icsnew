@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\DbCBanner;
 use App\Models\Menu;
 use App\Models\Service;
+use App\Models\SubProduct;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -34,7 +35,14 @@ class DtConsultingController extends Controller
 
     public function productDetail()
     {
-        return view('frontend.pages.product-detail2');
+
+        $subProducts = SubProduct::whereHas('translations', function ($courses) {
+            $courses->where('locale', '=', app()->getLocale());
+        })
+            ->with('translations')
+            ->get();
+
+        return view('frontend.pages.product-detail2',compact('subProducts'));
 
     }
 
