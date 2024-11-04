@@ -1,6 +1,39 @@
+<style>
 
 
+    .language-select-container {
+        margin-left: 20px; /* Menü ilə dil seçimi arasında boşluq */
+        list-style-type: none; /* Nöqtə işarələrini gizlədir */
+    }
 
+    /*.language-select {*/
+    /*    border: 2px solid #FF5733; !* Kənar xəttin rəngi *!*/
+    /*    border-radius: 4px; !* Künc yumşaqlığı *!*/
+    /*    padding: 5px 10px; !* Daxili boşluq *!*/
+    /*    background-color: #fff; !* Arxa fon rəngi *!*/
+    /*    color: #333; !* Mətn rəngi *!*/
+    /*    font-size: 14px; !* Kiçik mətn ölçüsü *!*/
+    /*    cursor: pointer; !* Kursoru göstərin *!*/
+    /*    transition: all 0.3s ease; !* Animasiya *!*/
+    /*    appearance: none; !* Brauzer defolt görünüşünü gizlət *!*/
+    /*    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><polygon points="0,0 20,0 10,10" fill="%23FF5733"/></svg>'); !* İkon əlavə edin *!*/
+    /*    background-repeat: no-repeat;*/
+    /*    background-position: right 10px center; !* İkonun mövqeyi *!*/
+    /*    background-size: 20px; !* İkon ölçüsü *!*/
+    /*    padding-right: 30px; !* İkon üçün sağda boşluq *!*/
+    /*}*/
+
+    .language-select:hover {
+        border-color: #FF9A33; /* Hover zamanı kənar xəttin rəngi */
+        background-color: #f0f0f0; /* Hover zamanı arxa fon rəngi */
+    }
+
+    .language-select option {
+        background-color: #fff; /* Seçimlərin arxa fonu */
+        color: #333; /* Seçimlərin mətn rəngi */
+    }
+
+</style>
 
 <header class="header-style2">
 
@@ -21,8 +54,18 @@
                         <li><a href="index-2.html#!"><i class="fab fa-twitter"></i></a></li>
                         <li><a href="index-2.html#!"><i class="fab fa-instagram"></i></a></li>
                         <li><a href="index-2.html#!"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li class="nav-item dropdown language-select-container"> <!-- Yeni div əlavə edin -->
+                            <select onchange="location = this.value;" class="language-select">
+                                @foreach($flanguages as $flanguage)
+                                    <option value="{{ route('frontend.switchLanguage', $flanguage->locale) }}" {{ $flanguage->locale == app()->getLocale() ? 'selected' : '' }}>
+                                        {{ ucfirst($flanguage->locale) }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </li>
                     </ul>
                 </div>
+
             </div>
         </div>
     </div>
@@ -70,11 +113,9 @@
                                 <li><a href="{{route('frontend.faq')}}">Faq</a>
                                 <li><a href="{{route('frontend.contact-us')}}">Contact</a>
                                 <li><a href="{{route('frontend.about')}}">About</a>
-
-
-
-
                             </ul>
+
+
                             <!-- end menu area -->
 
                             <!-- start attribute navigation -->

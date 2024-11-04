@@ -96,18 +96,18 @@ class ProductController extends Controller
 
     final public function update(ProductUpdateRequest $request, string $id): RedirectResponse
     {
+
         $data = $this->model->findOrFail($id);
 
         DB::transaction(function () use ($request, $data) {
-            $data->update($request->validated());
+//            $data->update($request->validated());
 
-            $this->translation->updateOrCreate(
-                ['' . $this->page . '_id' => $data->id, 'locale' => $request->language],
-                [
-                    'title' => $request->title,
-                    'description' => $request->description
-                ]
-            );
+            $this->translation->create([
+                $this->page . '_id' => $data->id,
+                'description' => $request->description,
+                'title' => $request->title,
+                'locale' => $request->language,
+            ]);
         });
 
         return redirect()->route('backend.' . $this->pages . '.index')->withSuccess('Yeniləmə etdiniz');
@@ -146,6 +146,7 @@ class ProductController extends Controller
                 );
                 $query->update(['image' => $imagePath]);
             }
+
             $translation->update([
                 'title' => $data['title'],
                 'description' => $data['description']

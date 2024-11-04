@@ -17,7 +17,13 @@
 
     <!-- title  -->
     <title>Biology - Laboratory and Research Template</title>
-
+    <style>
+        .active {
+            color: #FF5733; /* Seçilmiş elementin fərqli rəngi */
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
     <!-- favicon -->
     @include('frontend.includes.head-links')
 
@@ -39,83 +45,48 @@
     @include('frontend.includes.header-light')
 
 
-    <!-- PAGE TITLE
-    ================================================== -->
-{{--    <section class="page-title-section bg-img cover-background dark-overlay" data-overlay-dark="7" data-background="img/bg/bg-01.jpg">--}}
-{{--        <div class="container">--}}
-{{--            <div class="d-md-flex justify-content-between">--}}
-{{--                <div class="flex-shrink-0">--}}
-{{--                    <h1>Tabs</h1>--}}
-{{--                </div>--}}
-{{--                <div class="flex-grow-1">--}}
-{{--                    <ul class="text-center text-md-end ps-0">--}}
-{{--                        <li><a href="index.html">Home</a></li>--}}
-{{--                        <li><a href="tabs.html#!">Tabs</a></li>--}}
-{{--                    </ul>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </section>--}}
 
-    <!-- TABS
-    ================================================== -->
+
     <section>
         <div class="container">
             <div class="row mt-n5">
-
+                <!-- Sub Products List -->
                 <div class="col-lg-4 mt-5">
                     <div class="pe-xl-5">
                         <div class="bg-dark border-radius-5 p-4 p-xl-1-9 mb-4">
                             <div class="heading-one secondary mb-1-9">
-                                <span>Categories</span>
+                                <span>Sub products</span>
                             </div>
+
                             <ul class="side-bar-list list-unstyled m-0">
-                                {{-- SOL KATEQORIYALARIN FOREACH-I BURA YAZILACAQ -- START --}}
                                 @foreach($subProducts as $subProduct)
-                                <li class="mb-3 d-flex justify-content-between align-items-center">
-                                    <a href="/product-detail?id=123">
-                                        {{$subProduct->translation->name}}
-                                    </a>
-                                </li>
+                                    <li class="mb-3 d-flex justify-content-between align-items-center">
+                                        <a href="javascript:void(0);" onclick="showProductDetails({{ $subProduct->id }})" id="subProductLink{{ $subProduct->id }}">
+                                            {{ $subProduct->translation->name }}
+                                        </a>
+                                    </li>
                                 @endforeach
-                                {{-- SOL KATEQORIYALARIN FOREACH-I BURA YAZILACAQ -- STOP --}}
                             </ul>
                         </div>
                     </div>
                 </div>
+
+                <!-- MSDS and TDS Tabs -->
                 <div class="col-lg-8 mt-5">
                     <div class="horizontaltab tab-style1 position-relative z-index-9">
                         <ul class="resp-tabs-list hor_1">
-                            {{-- YUXARI TABLARIN FOREAC
-                            H-I BURA YAZILACAQ -- START --}}
-                            <li>MSDS</li>
-                            <li>TDS</li>
-                            {{-- YUXARI TABLARIN FOREACH-I BURA YAZILACAQ -- STOP --}}
+                            <li onclick="showTabContent('msds')">MSDS</li>
+                            <li onclick="showTabContent('tds')">TDS</li>
                         </ul>
                         <div class="resp-tabs-container hor_1 p-0">
-                            <div> {{--BIRINCI TAB -- START--}}
-                                <div>
-                                    <p>1. tab -->> One of the important functions of the science laboratory is the deepening of the scholars know-how
-                                        that medical principles and alertness are carefully associated with their personal natural environment.</p>
-                                    <p class="mb-0">We provide you with objective information so that you can map your route to fitness and wellness.</p>
-                                </div>
-                            </div> {{--BIRINCI TAB -- STOP--}}
-
-                            <div> {{--IKINCI TAB -- START--}}
-                                <div>
-                                    <p>2. tab -->> One of the important functions of the science laboratory is the deepening of the scholars know-how that medical principles
-                                        and alertness are carefully associated with their personal natural environment.</p>
-                                    <p class="mb-0">We provide you with objective information so that you can map your route to fitness and wellness.</p>
-                                </div>
-                            </div> {{--IKINCI TAB -- STOP--}}
-
-                            <div> {{--UCUNCU TAB -- START--}}
-                                <div>
-                                    <p>3. tab -->> One of the important functions of the science laboratory is the deepening of the scholars
-                                        know-how that medical principles and alertness are carefully associated with their personal natural environment.</p>
-                                    <p class="mb-0">We provide you with objective information so that you can map your route to fitness and wellness.</p>
-                                </div>
-                            </div> {{--IKINCI TAB -- STOP--}}
+                            <!-- MSDS Content -->
+                            <div id="msdsContent" style="display: none;">
+                                <p id="msdsText"></p>
+                            </div>
+                            <!-- TDS Content -->
+                            <div id="tdsContent" style="display: none;">
+                                <p id="tdsText"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -123,7 +94,51 @@
         </div>
     </section>
 
+    <script>
+        // Server-dən alınan məlumat
+        const subProductData = @json($subProducts);
+        let selectedSubProductId = null; // Seçilmiş məhsulun ID-si
 
+        // Seçilmiş məhsulun detallarını göstər
+        function showProductDetails(productId) {
+            const product = subProductData.find(p => p.id === productId);
+            if (product) {
+                document.getElementById('msdsText').innerHTML = product.msds_text;
+                document.getElementById('tdsText').innerHTML = product.tds_text;
 
+                // Əvvəlki seçilmiş linkin üslubunu silin
+                if (selectedSubProductId !== null) {
+                    const previousLink = document.getElementById('subProductLink' + selectedSubProductId);
+                    previousLink.style.color = ''; // Varsayılan rəng
+                    previousLink.style.fontWeight = ''; // Varsayılan font ağırlığı
+                    previousLink.style.textDecoration = ''; // Varsayılan altı xəttləmə
+                }
 
-@endsection
+                // Yeni seçilmiş linkin üslubunu tətbiq edin
+                const currentLink = document.getElementById('subProductLink' + productId);
+                currentLink.style.fontWeight = 'bold'; // Qalın mətn
+                currentLink.style.textDecoration = 'underline'; // Altı xəttləmə
+                selectedSubProductId = productId;
+
+                // Varsayılan olaraq MSDS məzmununu göstər
+                showTabContent('msds'); // MSDS tabını açın
+            }
+        }
+
+        // MSDS və TDS məzmununu göstərmək üçün tabları dəyiş
+        function showTabContent(tab) {
+            document.getElementById('msdsContent').style.display = tab === 'msds' ? 'block' : 'none';
+            document.getElementById('tdsContent').style.display = tab === 'tds' ? 'block' : 'none';
+        }
+
+        // Başlanğıcda ilk sub-product seçilməsi üçün bir funksiya əlavə edin
+        function initializeDefaultSubProduct() {
+            if (subProductData.length > 0) {
+                showProductDetails(subProductData[0].id); // İlk məhsulu seçin
+            }
+        }
+
+        // Sayt yükləndikdə varsayılan sub-productu seçin
+        window.onload = initializeDefaultSubProduct;
+    </script>
+

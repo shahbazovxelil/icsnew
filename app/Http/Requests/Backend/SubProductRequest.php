@@ -24,11 +24,11 @@ class SubProductRequest extends FormRequest
         return [
             'product_id' => 'required|exists:products,id',
             'name.*' => 'required|string|max:255',
-            'title.*' => 'required|string|max:255',
-            'msds_text.*' => 'required|string',
-            'msds_image.*' => 'required|file|mimes:jpg,jpeg,png',
-            'tds_text.*' => 'required|string',
-            'tds_image.*' => 'required|file|mimes:jpg,jpeg,png',
+            'title.*' => 'nullable|string|max:255',
+            'msds_text.*' => 'nullable|string',
+            'msds_image.*' => 'nullable|file|mimes:jpg,jpeg,png',
+            'tds_text.*' => 'nullable|string',
+            'tds_image.*' => 'nullable|file|mimes:jpg,jpeg,png',
         ];
     }
 

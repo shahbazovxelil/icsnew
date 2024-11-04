@@ -11,13 +11,15 @@ class Product extends Model
     use HasFactory, Translatable;
 
 
-    protected $fillable = ['id', 'image'];
+    protected $fillable = ['id', 'image','image_back_color'];
+    public $with = ['translations'];
 
     public array $translatedAttributes = [
         'title',
         'description',
         'locale',
     ];
+
 
 
 }
