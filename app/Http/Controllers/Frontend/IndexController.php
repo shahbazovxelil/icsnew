@@ -59,6 +59,49 @@ class IndexController extends Controller
             compact('main_banner','categories','courses','services','mentors','dt_c_banners'));
     }
 
+    public function sendmail1(Request $request)
+    {
+//
+//        $name = $request->name;
+//        $email = $request->email;
+//        $phone = $request->phone;
+//        Mail::send('frontend.email.sendEmail', ['name' => $name, 'phone' => $phone, 'email' => $email], function ($message) use ($email) {
+//            $message->to('shahbazovxelil13@gmail.com')->subject("aaa");
+//        });
+       $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'subject' => 'required',
+            'phone' => 'required',
+            'message' => 'required',
+        ]);
+
+
+//        $details = [
+//            'name' => $request->name,
+//            'email' => $request->email,
+//            'subject' => $request->subject,
+//            'phone' => $request->phone,
+//            'message' => $request->message,
+//        ];
+
+        $email = $request->email;
+        $message = $request->message;
+
+//      $aa =   Mail::send('frontend.email.sendEmail', $details, function($message) use ($details) {
+//            $message->to('shahbazovxelil13@gmail.com')
+//            ->subject($details['subject']);
+//        });
+
+ $dd  = Mail::send('frontend.email.sendEmail', ['name' => $request->name, 'phone' => $request->phone, 'email' => $email], function ($message) use ($email) {
+            $message->to('shahbazovxelil13@gmail.com')->subject("aaa");
+        });
+
+
+        return redirect()->back();
+
+    }
+
     public function sendmail(Request $request)
     {
 
@@ -66,7 +109,7 @@ class IndexController extends Controller
         $email = $request->email;
         $phone = $request->phone;
         Mail::send('frontend.email.sendEmail', ['name' => $name, 'phone' => $phone, 'email' => $email], function ($message) use ($email) {
-            $message->to('shahbazovxelil13@gmail.com')->subject("aaa");
+            $message->to('elman.taghiyev@icskimya.az')->subject("aaa");
         });
         return redirect()->back();
 

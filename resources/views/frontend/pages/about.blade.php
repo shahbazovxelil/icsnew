@@ -10,11 +10,11 @@
     <meta name="author" content="Chitrakoot Web" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="keywords" content="Laboratory and Research Template" />
-    <meta name="description" content="Biology - Laboratory and Research Template" />
+    <meta name="keywords" content="ICS Kimya" />
+    <meta name="description" content="ICS Kimya" />
 
     <!-- title  -->
-    <title>Biology - Laboratory and Research Template</title>
+    <title>ICS Kimya</title>
 
     @include('frontend.includes.head-links')
 
@@ -38,27 +38,50 @@
 
 
 
-    <section class="page-title-section bg-img cover-background dark-overlay" data-overlay-dark="2" data-background="{{asset('frontend/img/bg/bg-06.png')}}">
-        <div class="container">
-            <div class="d-md-flex justify-content-between">
-                <div class="flex-shrink-0">
-                    <h1>About Us</h1>
-                </div>
-                <div class="flex-grow-1">
-                    <ul class="text-center text-md-end ps-0">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html#!">About Us</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section class="page-title-section bg-img cover-background dark-overlay" data-overlay-dark="2" data-background="{{asset('frontend/img/bg/bg-06.png')}}">--}}
+{{--        <div class="container">--}}
+{{--            <div class="d-md-flex justify-content-between">--}}
+{{--                <div class="flex-shrink-0">--}}
+{{--                    <h1>About Us</h1>--}}
+{{--                </div>--}}
+{{--                <div class="flex-grow-1">--}}
+{{--                    <ul class="text-center text-md-end ps-0">--}}
+{{--                        <li><a href="index.html">Home</a></li>--}}
+{{--                        <li><a href="about.html#!">About Us</a></li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
     <!-- ABOUT US
     ================================================== -->
     <section class="about-us2">
         <div class="container">
             <div class="row align-itemsxl--center mt-n1-9">
+                <div class="col-lg-6 mt-1-9">
+                    <div class="ps-lg-1-9 ps-xl-7">
+                        <div class="heading-one mb-1-6 mb-sm-1-9">
+                            <span><i></i>About Us</span>
+                            <h2>About us</h2>
+                        </div>
+                        <p class="mb-1-9">
+
+                            Deep Drilling Chemicals Ltd. ( DDC ), 2009 yılından bu yana sıcak su ve petrol sondajlarına üretici ve tedarikçi olarak hizmet vermektedir. 2009 yılında, firmamız, Kuzey Irak'ta kayıtlı olarak faaliyet gösteren Samsa Company ( SMS ) adı altında hizmet vermekteydi. 2010 yılının başında, firma ismimizi yenileyerek Deep Drilling Chemicals Ltd. ( DDC ) olarak değiştirdik. Halen yurt içinde ve dışında faaliyetlerimize DDC Ltd. ismi ile devam etmekteyiz.<br><br>
+
+                            Firmamız, yerli ve yabancı tüm müşterilerine her çeşit sondaj katkı maddeleri ve kimyasallarını tedarik etmektedir.
+                            2011 yılından itibaren DDC, sadece ürün tedariği değil, aynı zaman da üretim aşamalarında da aktif olarak yer alarak , sektörün ihtiyaçları doğrultusunda ürünler geliştirmeye ve üretmeye başlamıştır.
+
+                            Aynı yıl içerisinde Türkiye’de ilk defa API standartlarında Poly Anionic Cellulose ( PAC ) üretimi başlamıştır. Bu ürünle birlikte Carboxy Methyl Cellulose ( CMC ) ve türevleri üretimi de yapılmaya devam edilmiştir.<br><br>
+
+                            2011 yılı sonlarında sondajlarda kaçak önleyici olarak kullanılan Fındık/Ceviz kabuğu öğütme tesisimiz Mardin’de faaliyete geçmiştir.
+                            2012 yılı itibariyle dünyanın en büyük Klor tesislerinden biri olan Dead Sea Works ile bayilik anlaşması yapılmış olup, firmanın sondajlarda yoğunluk kontrolü ve şeyl stabilizatörü olarak kullanılan Potasyum Klorür ürününün Türkiye ve Ortadoğu pazarındaki satış temsilciliği alınmıştır
+
+                        </p>
+
+                    </div>
+                </div>
+
                 <div class="col-lg-6 mt-1-9">
                     <div class="position-relative">
                         <div class="row mb-4 align-items-end position-relative z-index-9">
@@ -78,158 +101,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 mt-1-9">
-                    <div class="ps-lg-1-9 ps-xl-7">
-                        <div class="heading-one mb-1-6 mb-sm-1-9">
-                            <span><i></i>About Us</span>
-                            <h2>We Employ Latest Research Technology and Company</h2>
-                        </div>
-                        <p class="mb-1-9">One of the important functions of the science laboratory is the deepening of the scholars know-how that medical principles and alertness are carefully associated with their personal natural environment.</p>
-                        <div class="row mb-4 mt-n4">
-                            <div class="col-sm-6 mt-4">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0">
-                                        <img src="frontend/img/icons/icon-29.png" alt="...">
-                                    </div>
-                                    <div class="flex-grow-1 ps-3">
-                                        <h3 class="h5">Helpful Test Tips</h3>
-                                        <p class="mb-0 w-xl-90">Regulatory surroundings can assist aid sponsors.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 mt-4">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0">
-                                        <img src="frontend/img/icons/icon-30.png" alt="...">
-                                    </div>
-                                    <div class="flex-grow-1 ps-3">
-                                        <h3 class="h5">Patient Care</h3>
-                                        <p class="mb-0 w-xl-90">Regulatory surroundings can assist aid sponsors.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white box-shadow d-inline-block py-3 ps-3 pe-5 border-radius-5">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0">
-                                    <i class="fa-solid fa-phone-alt box-icon"></i>
-                                </div>
-                                <div class="flex-grow-1 ps-3">
-                                    <span class="display-31">24 / 7 Service Available</span>
-                                    <h6 class="display-27 mb-0">(+44) 123 456 789</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- TEAM
-    ================================================== -->
-    <section class="pt-0">
-        <div class="container">
-            <div class="heading-one text-center mb-1-9">
-                <span><i></i>Meet Our Team</span>
-                <h2 class="w-md-60 mx-auto">Expert Physiologist In Laboratory</h2>
-            </div>
-            <div class="row mt-n1-9">
-                <div class="col-md-6 col-lg-3 mt-1-9">
-                    <div class="card card-style7 border-0 shadow text-center border-radius-3">
-                        <img src="frontend/img/team/team-07.jpg" class="team-img" alt="...">
-                        <div class="social-icon">
-                            <a href="about.html#!"><i class="ti-twitter"></i></a>
-                            <a href="about.html#!"><i class="ti-instagram"></i></a>
-                            <a href="about.html#!"><i class="ti-facebook"></i></a>
-                            <a href="about.html#!"><i class="ti-linkedin"></i></a>
-                        </div>
-                        <div class="card-body p-1-6 p-xl-1-9">
-                            <h3 class="h4"><a href="team-details.html">Faruz Nuguse</a></h3>
-                            <span class="text-primary">Pathology Special</span>
-                            <p class="mb-2 border-top pt-3 mt-3">faruznuguse@gmail.com</p>
-                            <p class="mb-0">(+44) 152-567-987</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mt-1-9">
-                    <div class="card card-style7 border-0 shadow text-center border-radius-3">
-                        <img src="frontend/img/team/team-08.jpg" class="team-img" alt="...">
-                        <div class="social-icon">
-                            <a href="about.html#!"><i class="ti-twitter"></i></a>
-                            <a href="about.html#!"><i class="ti-instagram"></i></a>
-                            <a href="about.html#!"><i class="ti-facebook"></i></a>
-                            <a href="about.html#!"><i class="ti-linkedin"></i></a>
-                        </div>
-                        <div class="card-body p-1-6 p-xl-1-9">
-                            <h3 class="h4"><a href="team-details.html">Idris Luwam</a></h3>
-                            <span class="text-primary">Research Expert</span>
-                            <p class="mb-2 border-top pt-3 mt-3">idrisluwam@gmail.com</p>
-                            <p class="mb-0">(+44) 152-567-987</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mt-1-9">
-                    <div class="card card-style7 border-0 shadow text-center border-radius-3">
-                        <img src="frontend/img/team/team-09.jpg" class="team-img" alt="...">
-                        <div class="social-icon">
-                            <a href="about.html#!"><i class="ti-twitter"></i></a>
-                            <a href="about.html#!"><i class="ti-instagram"></i></a>
-                            <a href="about.html#!"><i class="ti-facebook"></i></a>
-                            <a href="about.html#!"><i class="ti-linkedin"></i></a>
-                        </div>
-                        <div class="card-body p-1-6 p-xl-1-9">
-                            <h3 class="h4"><a href="team-details.html">Selam Bisrat</a></h3>
-                            <span class="text-primary">Lab Head</span>
-                            <p class="mb-2 border-top pt-3 mt-3">selambisrat@gmail.com</p>
-                            <p class="mb-0">(+44) 152-567-987</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mt-1-9">
-                    <div class="card card-style7 border-0 shadow text-center border-radius-3">
-                        <img src="frontend/img/team/team-10.jpg" class="team-img" alt="...">
-                        <div class="social-icon">
-                            <a href="about.html#!"><i class="ti-twitter"></i></a>
-                            <a href="about.html#!"><i class="ti-instagram"></i></a>
-                            <a href="about.html#!"><i class="ti-facebook"></i></a>
-                            <a href="about.html#!"><i class="ti-linkedin"></i></a>
-                        </div>
-                        <div class="card-body p-1-6 p-xl-1-9">
-                            <h3 class="h4"><a href="team-details.html">Samantha Wood</a></h3>
-                            <span class="text-primary">Laboratory Technician</span>
-                            <p class="mb-2 border-top pt-3 mt-3">ristopherg@gmail.com</p>
-                            <p class="mb-0">(+44) 152-567-987</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- CALL TO ACTION
-    ================================================== -->
-    <section class="bg-secondary call-to-action2">
-        <div class="container">
-            <div class="row position-relative z-index-9">
-                <div class="col-lg-8 mx-auto">
-                    <div class="heading-one white text-center mb-1-9">
-                        <h2 class="text-white mb-4 mx-auto">Expect Nothing But The Best Form Medical Technologies</h2>
-                        <a href="contact.html" class="butn-style1 primary white position-relative z-index-9">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="position-absolute top-0 end-0 opacity05">
-            <img src="frontend/img/content/shape-02.png" alt="...">
-        </div>
-        <div class="position-absolute top-0 left-0 opacity05">
-            <img src="frontend/img/content/shape-03.png" alt="...">
-        </div>
-    </section>
 
-    <!-- TESTIMONIALS
-    ================================================== -->
+
+
+
+{{--    what clien say about us--}}
+
     <section class="p-lg-0">
         <div class="container">
             <div class="bg-img cover-background py-lg-10" data-background="frontend/img/content/map-bg.jpg">

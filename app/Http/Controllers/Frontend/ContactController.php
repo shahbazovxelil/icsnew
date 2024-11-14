@@ -17,6 +17,6 @@ class ContactController extends Controller
 //            ->with('translations')
 //            ->first();
 
-        return view('frontend.pages.contact');
+        return view('frontend.pages.contact-us');
     }
 }

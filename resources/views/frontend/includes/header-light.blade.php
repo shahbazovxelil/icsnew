@@ -43,17 +43,17 @@
                 <div class="col-md-9 col-xs-12">
                     <div class="top-bar-info">
                         <ul class="ps-0">
-                            <li><i class="ti-mobile"></i>(+123) 456 7890</li>
-                            <li class="d-none d-sm-inline-block"><i class="ti-email"></i>ics@gmail.com</li>
+                            <li><i class="ti-mobile"></i>(+994) 111 111 111</li>
+                            <li class="d-none d-sm-inline-block"><i class="ti-email"></i>ics-test@gmail.com</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-3 d-none d-md-block">
                     <ul class="top-social-icon ps-0">
-                        <li><a href="index-2.html#!"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="index-2.html#!"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="index-2.html#!"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="index-2.html#!"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                         <li class="nav-item dropdown language-select-container"> <!-- Yeni div əlavə edin -->
                             <select onchange="location = this.value;" class="language-select">
                                 @foreach($flanguages as $flanguage)
@@ -98,7 +98,6 @@
                                 <a href="{{route('frontend.index')}}" class="navbar-brand logodefault"><img id="logo" src="{{asset('frontend/img/logos/logo-ch.png')}}" alt="logo" /></a>
 
                                 <!-- end logo -->
-                                <p class="logo-text"><i>ICS KIMYA MADDELERI LLC</i></p>
 
                             </div>
 
@@ -121,8 +120,8 @@
                             <!-- start attribute navigation -->
                             <div class="attr-nav align-items-xl-center ms-xl-auto main-font">
                                 <ul>
-                                    <li class="search"><a href="index-2.html#!"><i class="fas fa-search"></i></a></li>
-                                    <li class="d-none d-xl-inline-block"><a href="contact.html" class="butn-style2 medium text-white"><span>ICS</span></a></li>
+{{--                                    <li class="search"><a href="index-2.html#!"><i class="fas fa-search"></i></a></li>--}}
+                                    <li class="d-none d-xl-inline-block"><a href="#" class="butn-style2 medium text-white"><span>ICS</span></a></li>
                                 </ul>
                             </div>
 {{--                            @include('frontend.includes.langSwitcher')--}}

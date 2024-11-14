@@ -12,11 +12,11 @@
     <meta name="author" content="Chitrakoot Web"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <meta name="keywords" content="Laboratory and Research Template"/>
-    <meta name="description" content="Biology - Laboratory and Research Template"/>
+    <meta name="keywords" content="ICS Kimya"/>
+    <meta name="description" content="ICS Kimya"/>
 
     <!-- title  -->
-    <title>ics</title>
+    <title>ICS Kimya</title>
 
     @include('frontend.includes.head-links')
 
@@ -64,7 +64,7 @@
         <div class="container">
             <div class="d-md-flex justify-content-between">
                 <div class="flex-shrink-0">
-                    <h1>Products1</h1>
+                    <h1>Products</h1>
                 </div>
                 <div class="flex-grow-1">
                     <ul class="text-center text-md-end ps-0">

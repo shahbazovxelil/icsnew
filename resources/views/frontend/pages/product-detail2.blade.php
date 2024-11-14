@@ -12,18 +12,12 @@
     <meta name="author" content="Chitrakoot Web" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="keywords" content="Laboratory and Research Template" />
-    <meta name="description" content="Biology - Laboratory and Research Template" />
+    <meta name="keywords" content="ICS Kimya"/>
+    <meta name="description" content="ICS Kimya"/>
 
     <!-- title  -->
-    <title>Biology - Laboratory and Research Template</title>
-    <style>
-        .active {
-            color: #FF5733; /* Seçilmiş elementin fərqli rəngi */
-            font-weight: bold;
-            text-decoration: underline;
-        }
-    </style>
+    <title>ICS Kimya</title>
+
     <!-- favicon -->
     @include('frontend.includes.head-links')
 
@@ -43,6 +37,7 @@
     <!-- HEADER
     ================================================== -->
     @include('frontend.includes.header-light')
+
 
 
 
@@ -121,7 +116,7 @@
                 selectedSubProductId = productId;
 
                 // Varsayılan olaraq MSDS məzmununu göstər
-                showTabContent('msds'); // MSDS tabını açın
+                // showTabContent('msds'); // MSDS tabını açın
             }
         }
 
@@ -142,3 +137,4 @@
         window.onload = initializeDefaultSubProduct;
     </script>
 
+@endsection

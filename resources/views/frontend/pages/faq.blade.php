@@ -12,11 +12,11 @@
     <meta name="author" content="Chitrakoot Web"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <meta name="keywords" content="Laboratory and Research Template"/>
-    <meta name="description" content="Biology - Laboratory and Research Template"/>
+    <meta name="keywords" content="ICS Kimya"/>
+    <meta name="description" content="ICS Kimya"/>
 
     <!-- title  -->
-    <title>Biology - Laboratory and Research Template</title>
+    <title>ICS Kimya</title>
 
     @include('frontend.includes.head-links')
 
@@ -59,12 +59,14 @@
         <div class="container">
             <div class="heading-one text-center mb-1-9">
                 <span><i></i>Faq's</span>
-                <h2 class="w-md-60 mx-auto">Laboratory Questions</h2>
+                <h2 class="w-md-60 mx-auto">Chemical Questions</h2>
             </div>
             <div class="row align-items-center mt-n4">
                 <div class="col-lg-4 mt-4">
                     <div class="text-center text-lg-start">
-                        <img src="frontend/img/content/about-03.png" alt="...">
+                        <img src="frontend/img/content/faq2.jpg" height="200px" width="200px" alt="...">
+                        <img src="frontend/img/content/faq.jfif" alt="...">
+
                     </div>
                 </div>
                 <div class="col-lg-8 mt-4">

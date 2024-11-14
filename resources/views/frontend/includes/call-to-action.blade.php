@@ -4,8 +4,8 @@
             <div class="col-lg-10 mx-auto">
                 <div class="call-to-action text-center">
                     <h2>We Are Largest Network & Trusted By World's Leading Companies</h2>
-                    <a href="about.html" class="butn-style2 white mx-2 mb-3 mb-sm-0">Read More</a>
-                    <a href="contact.html" class="butn-style2 mx-2">Contact Us</a>
+                    <a href="#" class="butn-style2 white mx-2 mb-3 mb-sm-0">Read More</a>
+                    <a href="{{route('frontend.contact-us')}}" class="butn-style2 mx-2">Contact Us</a>
                 </div>
             </div>
         </div>

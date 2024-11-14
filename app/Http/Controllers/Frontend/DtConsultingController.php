@@ -15,12 +15,6 @@ class DtConsultingController extends Controller
     public function index(): View
     {
 
-        $dt_c_banners = DbCBanner::whereHas('translations', function ($dt_c_banners) {
-            $dt_c_banners->where('locale', '=', app()->getLocale());
-        })
-            ->with('translations')
-            ->first();
-
 
         $services = Service::whereHas('translations', function ($services) {
             $services->where('locale', '=', app()->getLocale());
@@ -43,6 +37,18 @@ class DtConsultingController extends Controller
             ->get();
 
         return view('frontend.pages.product-detail2',compact('subProducts'));
+
+    }
+    public function serviceDetail(int $id)
+    {
+
+        $service = Service::whereHas('translations', function ($service) {
+            $service->where('locale', '=', app()->getLocale());
+        })
+            ->with('translations')
+            ->findOrFail($id);
+
+        return view('frontend.pages.service-detail',compact('service'));
 
     }
 

@@ -111,6 +111,7 @@ Route::name('frontend.')->group(function ($locale) {
     Route::get('', [IndexController::class, 'index'])->name('index');
     Route::get('/course', [CourseController::class, 'index'])->name('course');
     Route::get('/service', [DtConsultingController::class, 'index'])->name('service');
+    Route::get('/service-detail/{id}', [DtConsultingController::class, 'serviceDetail'])->name('service-detail');
     Route::get('/products', [\App\Http\Controllers\Frontend\ProductController::class, 'products'])->name('products');
     Route::get('/product-detail/{id}', [\App\Http\Controllers\Frontend\ProductController::class, 'subProducts'])->name('product-detail');
     Route::get('/faq', [DtConsultingController::class, 'faq'])->name('faq');
@@ -126,7 +127,7 @@ Route::name('frontend.')->group(function ($locale) {
 
     Route::get('/course/item/{slug}', [\App\Http\Controllers\Frontend\CourseItemController::class, 'index'])->name('course.item');
     Route::get('switch-language/{locale}', [\App\Http\Controllers\Frontend\LanguageController::class, 'switchLanguage'])->name('switchLanguage');
-    Route::post('contact', [IndexController::class, 'sendmail'])->name('contact.post');
+    Route::post('contact', [IndexController::class, 'sendmail'])->name('send-mail');
 
 
 });

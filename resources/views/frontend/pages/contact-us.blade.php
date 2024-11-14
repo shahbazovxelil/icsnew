@@ -11,11 +11,11 @@
     <meta name="author" content="Chitrakoot Web" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="keywords" content="Laboratory and Research Template" />
-    <meta name="description" content="Biology - Laboratory and Research Template" />
+    <meta name="keywords" content="ICS Kimya" />
+    <meta name="description" content="ICS Kimya" />
 
     <!-- title  -->
-    <title>Biology - Laboratory and Research Template</title>
+    <title>ICS Kimya</title>
 
     @include('frontend.includes.head-links')
 
@@ -64,8 +64,8 @@
                             <span><i></i>Contact Form</span>
                             <h2>Get in touch with us!</h2>
                         </div>
-                        <form class="quform" action="https://biology.websitelayout.net/quform/contact.php" method="post" enctype="multipart/form-data" onclick="">
-
+                            <form action="{{ route('frontend.send-mail') }}" method="post" enctype="multipart/form-data">
+                                @csrf
                             <div class="quform-elements">
 
                                 <div class="row">
@@ -75,7 +75,7 @@
                                         <div class="quform-element form-group">
                                             <label for="name">Your Name <span class="quform-required">*</span></label>
                                             <div class="quform-input">
-                                                <input class="form-control" id="name" type="text" name="name" placeholder="Your name here" />
+                                                <input class="form-control"  type="text" name="name" placeholder="Your name here" required/>
                                             </div>
                                         </div>
 
@@ -87,7 +87,7 @@
                                         <div class="quform-element form-group">
                                             <label for="email">Your Email <span class="quform-required">*</span></label>
                                             <div class="quform-input">
-                                                <input class="form-control" id="email" type="text" name="email" placeholder="Your email here" />
+                                                <input class="form-control"  type="text" name="email" placeholder="Your email here"  required />
                                             </div>
                                         </div>
                                     </div>
@@ -98,7 +98,7 @@
                                         <div class="quform-element form-group">
                                             <label for="subject">Your Subject <span class="quform-required">*</span></label>
                                             <div class="quform-input">
-                                                <input class="form-control" id="subject" type="text" name="subject" placeholder="Your subject here" />
+                                                <input class="form-control"  type="text" name="subject" placeholder="Your subject here"   required/>
                                             </div>
                                         </div>
 
@@ -110,7 +110,7 @@
                                         <div class="quform-element form-group">
                                             <label for="phone">Contact Number</label>
                                             <div class="quform-input">
-                                                <input class="form-control" id="phone" type="text" name="phone" placeholder="Your phone here" />
+                                                <input class="form-control"  type="text" name="phone" placeholder="Your phone here" required/>
                                             </div>
                                         </div>
 
@@ -122,37 +122,17 @@
                                         <div class="quform-element form-group">
                                             <label for="message">Message <span class="quform-required">*</span></label>
                                             <div class="quform-input">
-                                                <textarea class="form-control" id="message" name="message" rows="3" placeholder="Tell us a few words"></textarea>
+                                                <textarea class="form-control" name="message" rows="3" placeholder="Tell us a few words"  required></textarea>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- End Textarea element -->
-
-                                    <!-- Begin Captcha element -->
-                                    <div class="col-md-12">
-                                        <div class="quform-element">
-                                            <div class="form-group">
-                                                <div class="quform-input">
-                                                    <input class="form-control" id="type_the_word" type="text" name="type_the_word" placeholder="Type the below word" />
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="quform-captcha">
-                                                    <div class="quform-captcha-inner">
-                                                        <img src="{{asset('frontend/quform/images/captcha/courier-new-light.png')}}" alt="...">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Captcha element -->
-
                                     <!-- Begin Submit button -->
                                     <div class="col-md-12">
                                         <div class="quform-submit-inner">
-                                            <button class="butn-style2 border-0" type="submit"><span>Send Message</span></button>
+                                            <button  type="submit"><span>Send Message</span></button>
                                         </div>
-                                        <div class="quform-loading-wrap text-left"><span class="quform-loading"></span></div>
+{{--                                        <div class="quform-loading-wrap text-left"><span class="quform-loading"></span></div>--}}
                                     </div>
                                     <!-- End Submit button -->
 
@@ -193,7 +173,8 @@
     <!-- MAP
     ================================================== -->
     <section class="p-0">
-        <iframe class="map" src="https://maps.google.com/maps?q=london&t=&z=13&ie=UTF8&iwloc=&output=embed" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48625.6020124484!2d49.8110255!3d40.38447345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d8c33c62a3f%3A0x77807ca915edd570!2sYasamal%2C%20Baku!5e0!3m2!1sen!2saz!4v1731618556866!5m2!1sen!2saz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+{{--        <iframe class="map" src="https://maps.google.com/maps?q=london&t=&z=13&ie=UTF8&iwloc=&output=embed" scrolling="no" marginheight="0" marginwidth="0"></iframe>--}}
     </section>
 
 
