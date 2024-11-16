@@ -59,9 +59,9 @@
                                         <p class="text-white w-xxl-75 lh-base">Our Website Is Under Construction And Will Be Live Very Soon. Please Stay Tuned And Inspired.</p>
                                     </div>
                                     <ul class="countdown mb-1-9 mb-lg-2-5 ps-0">
-                                        <li><span class="days">22</span>
-                                            <p class="timeRefDays text-center">days</p>
-                                        </li>
+{{--                                        <li><span class="days">22</span>--}}
+{{--                                            <p class="timeRefDays text-center">days</p>--}}
+{{--                                        </li>--}}
                                         <li class="no-border-right"><span class="seconds">00</span>
                                             <p class="timeRefSeconds">seconds</p>
                                         </li>
