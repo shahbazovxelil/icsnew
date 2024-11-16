@@ -59,6 +59,11 @@ class IndexController extends Controller
             compact('main_banner','categories','courses','services','mentors','dt_c_banners'));
     }
 
+
+    public function comingSoon(){
+        return view('frontend.pages.coming-soon');
+    }
+
     public function sendmail1(Request $request)
     {
 //

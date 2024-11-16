@@ -108,7 +108,8 @@ Route::middleware('auth')->prefix('admin')->name('backend.')->group(function () 
 
 Route::name('frontend.')->group(function ($locale) {
 
-    Route::get('', [IndexController::class, 'index'])->name('index');
+    Route::get('', [IndexController::class, 'comingSoon'])->name('coming-soon');
+    Route::get('aG9tZQ==', [IndexController::class, 'index'])->name('index');
     Route::get('/course', [CourseController::class, 'index'])->name('course');
     Route::get('/service', [DtConsultingController::class, 'index'])->name('service');
     Route::get('/service-detail/{id}', [DtConsultingController::class, 'serviceDetail'])->name('service-detail');
