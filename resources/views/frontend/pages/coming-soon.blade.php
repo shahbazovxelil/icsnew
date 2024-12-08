@@ -28,6 +28,36 @@
     <!-- quform css -->
     <link rel="stylesheet" href="frontend/quform/css/base.css">
 
+
+    <style>
+        .countdown li {
+            display: inline-block;
+            margin-right: 10px;
+            text-align: center;
+        }
+
+        .countdown li span {
+            font-size: 2em;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .countdown .timeRefDays,
+        .countdown .timeRefHours,
+        .countdown .timeRefMinutes,
+        .countdown .timeRefSeconds {
+            font-size: 0.9em;
+            color: #ccc;
+        }
+
+    </style>
+
+
+
+
+
+
+
     <!-- core style css -->
     <link href="frontend/css/styles.css" rel="stylesheet">
 
@@ -41,15 +71,14 @@
 
 <!-- COMINGSOON
 ================================================== -->
-<section class="full-screen p-0 bg-img cover-background primary-overlay coming-soon bg-dark"  >
+<!-- COMINGSOON
+================================================== -->
+<section class="full-screen p-0 bg-img cover-background primary-overlay coming-soon bg-dark">
     <div class="container-fluid d-flex flex-column">
         <div class="row align-items-center justify-content-center min-vh-100">
             <div class="col-xl-10 mx-auto">
                 <div class="bg-dark position-relative z-index-9 border-radius-5">
                     <div class="row g-0">
-{{--                        <div class="col-lg-4">--}}
-{{--                            <div class="bg-img cover-background h-100" data-background="frontend/img/content/coming-soon-img.jpg"></div>--}}
-{{--                        </div>--}}
                         <div class="col-lg-8">
                             <div class="d-table w-100 h-100 position-relative overflow-hidden ">
                                 <div class="d-table-cell align-middle inner-content position-relative z-index-9">
@@ -58,15 +87,21 @@
                                         <h1 class="mb-1-6 mb-sm-1-9 text-white text-uppercase display-21 display-sm-15 display-xl-10 display-xxl-5 letter-spacing-2 font-weight-300">We are coming soon</h1>
                                         <p class="text-white w-xxl-75 lh-base">Our Website Is Under Construction And Will Be Live Very Soon. Please Stay Tuned And Inspired.</p>
                                     </div>
+                                    <!-- Countdown Timer -->
                                     <ul class="countdown mb-1-9 mb-lg-2-5 ps-0">
-{{--                                        <li><span class="days">22</span>--}}
-{{--                                            <p class="timeRefDays text-center">days</p>--}}
-{{--                                        </li>--}}
-                                        <li class="no-border-right"><span class="seconds">00</span>
+                                        <li><span id="days">00</span>
+                                            <p class="timeRefDays text-center">days</p>
+                                        </li>
+                                        <li><span id="hours">00</span>
+                                            <p class="timeRefHours text-center">hours</p>
+                                        </li>
+                                        <li><span id="minutes">00</span>
+                                            <p class="timeRefMinutes text-center">minutes</p>
+                                        </li>
+                                        <li class="no-border-right"><span id="seconds">00</span>
                                             <p class="timeRefSeconds">seconds</p>
                                         </li>
                                     </ul>
-
                                 </div>
                                 <div class="position-absolute bottom-0 end-0 opacity05">
                                     <img src="frontend/img/content/shape-02.png" alt="...">
@@ -109,6 +144,46 @@
 
 <!-- form scripts js -->
 <script src="frontend/quform/js/scripts.js"></script>
+
+
+<scrip>
+
+
+    <script>
+        // Set the date we're counting down to (30 days from today)
+        var countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 30); // Add 30 days to the current date
+
+        // Update the countdown every 1 second
+        var x = setInterval(function() {
+
+            // Get the current date and time
+            var now = new Date().getTime();
+
+            // Find the time remaining
+            var distance = countdownDate - now;
+
+            // Calculate days, hours, minutes, and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            // If the countdown is finished, display a message
+            if (distance < 0) {
+                clearInterval(x);
+                document.querySelector(".countdown").innerHTML = "The website is now live!";
+            }
+        }, 1000);
+    </script>
+
+</scrip>
 
 <!-- all js include end -->
 
