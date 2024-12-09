@@ -15,7 +15,7 @@
     <meta name="description" content="ICS Kimya"/>
 
     <!-- title  -->
-    <title>ICS Kimya</title>
+    <title>ICS KİMYA MADDELERİ</title>
 
 
 

@@ -8,7 +8,7 @@
 <head>
 
     <!-- title  -->
-    <title>ICS Kimya</title>
+    <title>ICS KİMYA MADDELERİ</title>
 
 
 

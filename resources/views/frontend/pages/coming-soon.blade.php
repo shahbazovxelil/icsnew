@@ -11,7 +11,7 @@
     <meta name="description" content="Biology - Laboratory and Research Template" />
 
     <!-- title  -->
-    <title>ICS Kimya</title>
+    <title>ICS KİMYA MADDELERİ</title>
 
 
     <!-- favicon -->
