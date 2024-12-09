@@ -9,6 +9,7 @@ use App\Models\DbCBanner;
 use App\Models\MainBanner;
 use App\Models\Mentor;
 use App\Models\Service;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
@@ -118,6 +119,16 @@ class IndexController extends Controller
         });
         return redirect()->back();
 
+    }
+
+    public function getDaysUntil()
+    {
+        $today = Carbon::now(); // Bugünkü tarix
+        $targetDate = Carbon::create(2025, 1, 1); // 2025-ci il Yanvarın 1-i
+
+        $daysLeft = $today->diffInDays($targetDate); // Gün fərqi
+
+      return view('frontend.pages.coming-soon', compact('daysLeft'));
     }
 
 }

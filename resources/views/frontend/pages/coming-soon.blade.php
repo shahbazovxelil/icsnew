@@ -29,28 +29,6 @@
     <link rel="stylesheet" href="frontend/quform/css/base.css">
 
 
-    <style>
-        .countdown li {
-            display: inline-block;
-            margin-right: 10px;
-            text-align: center;
-        }
-
-        .countdown li span {
-            font-size: 2em;
-            font-weight: bold;
-            color: #fff;
-        }
-
-        .countdown .timeRefDays,
-        .countdown .timeRefHours,
-        .countdown .timeRefMinutes,
-        .countdown .timeRefSeconds {
-            font-size: 0.9em;
-            color: #ccc;
-        }
-
-    </style>
 
 
 
@@ -84,24 +62,15 @@
                                 <div class="d-table-cell align-middle inner-content position-relative z-index-9">
                                     <img src="frontend/img/logos/logo-ch.png" alt="..." class="mb-4">
                                     <div class="mb-1-9 mb-md-2-5">
-                                        <h1 class="mb-1-6 mb-sm-1-9 text-white text-uppercase display-21 display-sm-15 display-xl-10 display-xxl-5 letter-spacing-2 font-weight-300">We are coming soon</h1>
+                                        <h1 class="mb-1-6 mb-sm-1-9 text-white text-uppercase display-21 display-sm-15 display-xl-10 display-xxl-5 letter-spacing-2 font-weight-300">We are coming   <ul class="countdown mb-1-9 mb-lg-2-5 ps-0">
+                                                <li><span>{{$daysLeft}}</span>
+                                                    <p class="timeRefDays text-center">days</p>
+                                                </li>
+
+                                            </ul> day after</h1>
                                         <p class="text-white w-xxl-75 lh-base">Our Website Is Under Construction And Will Be Live Very Soon. Please Stay Tuned And Inspired.</p>
                                     </div>
-                                    <!-- Countdown Timer -->
-                                    <ul class="countdown mb-1-9 mb-lg-2-5 ps-0">
-                                        <li><span id="days">00</span>
-                                            <p class="timeRefDays text-center">days</p>
-                                        </li>
-                                        <li><span id="hours">00</span>
-                                            <p class="timeRefHours text-center">hours</p>
-                                        </li>
-                                        <li><span id="minutes">00</span>
-                                            <p class="timeRefMinutes text-center">minutes</p>
-                                        </li>
-                                        <li class="no-border-right"><span id="seconds">00</span>
-                                            <p class="timeRefSeconds">seconds</p>
-                                        </li>
-                                    </ul>
+
                                 </div>
                                 <div class="position-absolute bottom-0 end-0 opacity05">
                                     <img src="frontend/img/content/shape-02.png" alt="...">
@@ -145,46 +114,6 @@
 <!-- form scripts js -->
 <script src="frontend/quform/js/scripts.js"></script>
 
-
-<script>
-    // Check if the countdown date is already saved in localStorage
-    var countdownDate;
-    if (localStorage.getItem("countdownDate")) {
-        countdownDate = new Date(localStorage.getItem("countdownDate"));
-    } else {
-        countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 30); // Add 30 days to the current date
-        localStorage.setItem("countdownDate", countdownDate); // Save the countdown date
-    }
-
-    // Update the countdown every 1 second
-    var x = setInterval(function() {
-        // Get the current date and time
-        var now = new Date().getTime();
-
-        // Find the time remaining
-        var distance = countdownDate - now;
-
-        // Calculate days, hours, minutes, and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Display the result
-        document.getElementById("days").innerHTML = days;
-        document.getElementById("hours").innerHTML = hours;
-        document.getElementById("minutes").innerHTML = minutes;
-        document.getElementById("seconds").innerHTML = seconds;
-
-        // If the countdown is finished, display a message
-        if (distance < 0) {
-            clearInterval(x);
-            document.querySelector(".countdown").innerHTML = "The website is now live!";
-            localStorage.removeItem("countdownDate"); // Remove the saved date
-        }
-    }, 1000);
-</script>
 
 
 <!-- all js include end -->

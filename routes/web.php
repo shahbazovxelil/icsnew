@@ -129,6 +129,7 @@ Route::name('frontend.')->group(function ($locale) {
     Route::get('/course/item/{slug}', [\App\Http\Controllers\Frontend\CourseItemController::class, 'index'])->name('course.item');
     Route::get('switch-language/{locale}', [\App\Http\Controllers\Frontend\LanguageController::class, 'switchLanguage'])->name('switchLanguage');
     Route::post('contact', [IndexController::class, 'sendmail'])->name('send-mail');
+    Route::get('days-diff', [IndexController::class, 'getDaysUntil']);
 
 
 });

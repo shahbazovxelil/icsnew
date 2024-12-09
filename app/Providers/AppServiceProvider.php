@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Models\Category;
 use App\Models\Language;
 use App\Models\Setting;
+use Carbon\Carbon;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 
@@ -41,11 +42,24 @@ class AppServiceProvider extends ServiceProvider
         })
             ->with('translations')
             ->get();
+
+        $today = Carbon::now();
+        $targetDate = Carbon::create(2025, 1, 2);
+
+        $daysLeft = $today->diffInDays($targetDate);
+
+
+
         View::share([
             'flanguages' => $flanguages,
             'setting' => $setting,
             'categories' => $categories,
+            'daysLeft' => $daysLeft,
         ]);
+
+
+
+
 
     }
 }
