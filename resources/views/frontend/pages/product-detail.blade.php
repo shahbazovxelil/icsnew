@@ -16,7 +16,7 @@
     <meta name="description" content="Biology - Laboratory and Research Template" />
 
     <!-- title  -->
-    <title>ICS KİMYA MADDELERİ</title>
+    <title>ICS KIMYA MADDELERI</title>
 
 
     @include('frontend.includes.head-links')
