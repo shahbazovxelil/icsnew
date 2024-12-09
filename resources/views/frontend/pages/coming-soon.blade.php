@@ -146,44 +146,46 @@
 <script src="frontend/quform/js/scripts.js"></script>
 
 
-<scrip>
-
-
-    <script>
-        // Set the date we're counting down to (30 days from today)
-        var countdownDate = new Date();
+<script>
+    // Check if the countdown date is already saved in localStorage
+    var countdownDate;
+    if (localStorage.getItem("countdownDate")) {
+        countdownDate = new Date(localStorage.getItem("countdownDate"));
+    } else {
+        countdownDate = new Date();
         countdownDate.setDate(countdownDate.getDate() + 30); // Add 30 days to the current date
+        localStorage.setItem("countdownDate", countdownDate); // Save the countdown date
+    }
 
-        // Update the countdown every 1 second
-        var x = setInterval(function() {
+    // Update the countdown every 1 second
+    var x = setInterval(function() {
+        // Get the current date and time
+        var now = new Date().getTime();
 
-            // Get the current date and time
-            var now = new Date().getTime();
+        // Find the time remaining
+        var distance = countdownDate - now;
 
-            // Find the time remaining
-            var distance = countdownDate - now;
+        // Calculate days, hours, minutes, and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Calculate days, hours, minutes, and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // Display the result
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
 
-            // Display the result
-            document.getElementById("days").innerHTML = days;
-            document.getElementById("hours").innerHTML = hours;
-            document.getElementById("minutes").innerHTML = minutes;
-            document.getElementById("seconds").innerHTML = seconds;
+        // If the countdown is finished, display a message
+        if (distance < 0) {
+            clearInterval(x);
+            document.querySelector(".countdown").innerHTML = "The website is now live!";
+            localStorage.removeItem("countdownDate"); // Remove the saved date
+        }
+    }, 1000);
+</script>
 
-            // If the countdown is finished, display a message
-            if (distance < 0) {
-                clearInterval(x);
-                document.querySelector(".countdown").innerHTML = "The website is now live!";
-            }
-        }, 1000);
-    </script>
-
-</scrip>
 
 <!-- all js include end -->
 
