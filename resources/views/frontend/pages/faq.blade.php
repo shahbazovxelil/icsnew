@@ -18,7 +18,6 @@
     <!-- title  -->
     <title>ICS Kimya</title>
 
-    @include('frontend.includes.head-links')
 
 </head>
 

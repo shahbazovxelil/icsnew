@@ -19,7 +19,6 @@
     <title>ICS Kimya</title>
 
     <!-- favicon -->
-    @include('frontend.includes.head-links')
 
 
 </head>

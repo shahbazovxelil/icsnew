@@ -11,7 +11,8 @@
     <meta name="description" content="Biology - Laboratory and Research Template" />
 
     <!-- title  -->
-    <title>ics</title>
+    <title>ICS Kimya</title>
+
 
     <!-- favicon -->
     <link rel="shortcut icon" href="frontend/img/logos/fav2.png" />
