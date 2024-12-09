@@ -14,7 +14,7 @@
     <title>Biology - Laboratory and Research Template</title>
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="{{asset('frontend/img/logos/favicon.png')}}" />
+    <link rel="shortcut icon" href="{{asset('frontend/img/logos/fav2.png')}}" />
     <link rel="apple-touch-icon" href="{{asset('frontend/img/logos/apple-touch-icon-57x57.png')}}" />
     <link rel="apple-touch-icon" sizes="72x72" href="{{asset('frontend/img/logos/apple-touch-icon-72x72.png')}}" />
     <link rel="apple-touch-icon" sizes="114x114" href="{{asset('frontend/img/logos/apple-touch-icon-114x114.png')}}"/>

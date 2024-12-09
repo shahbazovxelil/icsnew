@@ -14,7 +14,7 @@
     <title>ics</title>
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="frontend/img/logos/logo-ch.png" />
+    <link rel="shortcut icon" href="frontend/img/logos/fav2.png" />
     <link rel="apple-touch-icon" href="frontend/img/logos/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="frontend/img/logos/apple-touch-icon-72x72.png" />
     <link rel="apple-touch-icon" sizes="114x114" href="frontend/img/logos/apple-touch-icon-114x114.png" />
